@@ -24,7 +24,8 @@ finacial_agent = Agent(
     model=Groq(id="llama-3.3-70b-versatile"),
     tools=[YFinanceTools(
         stock_price=True, analyst_recommendations=True, stock_fundamentals=True), get_company_symbol],
-    show_tool_calls=True, markdown=True, instructions=["Use labels to display data. If you do not know the company symbol, please use this tool, even if it is not a public company"], debug_mode=True
+    show_tool_calls=True, markdown=True,
+    instructions=["Use labels to display data. If you do not know the company symbol, please use this tool, even if it is not a public company"], debug_mode=True
 )
 
 
